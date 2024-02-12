@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 52101899}
   - component: {fileID: 52101898}
   - component: {fileID: 52101897}
+  - component: {fileID: 52101900}
   m_Layer: 0
   m_Name: pipeDown
   m_TagString: Untagged
@@ -246,13 +247,77 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52101896}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.255, y: -1.4858, z: 0}
-  m_LocalScale: {x: 2.548, y: 2.548, z: 2.548}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.02, y: -4.2415, z: 0}
+  m_LocalScale: {x: 3.377884, y: 3.377884, z: 3.377884}
   m_ConstrainProportionsScale: 0
   m_Children: []
+  m_Father: {fileID: 365447966}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52101900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52101896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e2d394abc79a94ba2cc0f3c4d47684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
+--- !u!1 &63480635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63480636}
+  - component: {fileID: 63480637}
+  m_Layer: 0
+  m_Name: pipeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63480636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63480635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6715654, y: 0.0085933395, z: -0.17251377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 365447966}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63480637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63480635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d8e019bb39a7694c89753b5c585b428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipePrefab: {fileID: 365447965}
+  poolSize: 8
+  spawnRate: 1
+  pipeMinY: -2
+  pipeMaxY: 3.5
+  distanceBetweenPipes: 9
 --- !u!1 &304642054
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +401,39 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &365447965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365447966}
+  m_Layer: 0
+  m_Name: pipePrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365447966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365447965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.41656542, y: 0.9585067, z: 0.17251377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2026392700}
+  - {fileID: 52101899}
+  m_Father: {fileID: 63480636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434578158
 GameObject:
@@ -671,7 +769,7 @@ GameObject:
   - component: {fileID: 1873251694}
   - component: {fileID: 1873251693}
   m_Layer: 0
-  m_Name: Mobile - Flappy Bird - Version 12 Sprites - copia_2
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -800,6 +898,7 @@ GameObject:
   - component: {fileID: 2026392700}
   - component: {fileID: 2026392699}
   - component: {fileID: 2026392698}
+  - component: {fileID: 2026392701}
   m_Layer: 0
   m_Name: pipeUp
   m_TagString: Untagged
@@ -912,13 +1011,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026392697}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.255, y: 3.42, z: 0}
-  m_LocalScale: {x: 2.548, y: 2.548, z: 2.548}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.02, y: 4.15, z: 0}
+  m_LocalScale: {x: 3.377884, y: 3.377884, z: 3.377884}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 365447966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2026392701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026392697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e2d394abc79a94ba2cc0f3c4d47684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -927,5 +1039,4 @@ SceneRoots:
   - {fileID: 304642056}
   - {fileID: 1701452713}
   - {fileID: 1873251695}
-  - {fileID: 2026392700}
-  - {fileID: 52101899}
+  - {fileID: 63480636}
