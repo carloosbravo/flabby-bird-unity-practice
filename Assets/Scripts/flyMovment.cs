@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class flyMovment : MonoBehaviour
 {
-    public float _velocity = 1.5f;
+    public float _velocity = 2.5f;
     public float _rotationSpeed = 10f;
 
     private Rigidbody2D _rb;

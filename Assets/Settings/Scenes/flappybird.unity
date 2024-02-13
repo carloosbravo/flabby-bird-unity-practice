@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipePrefab: {fileID: 8596988186244438664, guid: 60ec11a407d92ea46ac25f3338855473, type: 3}
-  poolSize: 5
+  poolSize: 8
   spawnRate: 2
   pipeMinY: -1
   pipeMaxY: 3.5
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6820a3413f14dc498560dbc62460da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocity: 3.5
+  _velocity: 6
   _rotationSpeed: 5
 --- !u!70 &1701452715
 CapsuleCollider2D:
@@ -897,7 +897,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
