@@ -9,14 +9,16 @@ public class PipePool : MonoBehaviour
     public float spawnRate = 2f;
     public float pipeMinY = -1f;
     public float pipeMaxY = 3.5f;
-    public float distanceBetweenPipes = 7f; // Add this line
+    public float distanceBetweenPipes = 7f;
     private List<GameObject> pipes;
     private float lastSpawnTime;
     private float pipeWidth;
+    private Camera mainCamera;
 
     void Start()
     {
         pipes = new List<GameObject>();
+        mainCamera = Camera.main; // Obtener la cámara principal
         GameObject pipe;
         for (int i = 0; i < poolSize; i++)
         {
@@ -34,6 +36,9 @@ public class PipePool : MonoBehaviour
             lastSpawnTime = Time.time;
             SpawnPipe();
         }
+
+
+
     }
 
     void SpawnPipe()
@@ -43,8 +48,8 @@ public class PipePool : MonoBehaviour
         {
             float randomY = Random.Range(pipeMinY, pipeMaxY);
             pipe.transform.position = new Vector2(transform.position.x, randomY);
-            // Add the following line to adjust the x position of the spawned pipes
             pipe.transform.position += Vector3.right * distanceBetweenPipes;
+
             pipe.SetActive(true);
         }
     }
