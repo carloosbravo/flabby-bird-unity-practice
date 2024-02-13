@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField]private GameObject _gameOverCanvas;
+  
 
     private void Awake()
     {
@@ -24,7 +25,9 @@ public class GameManager : MonoBehaviour
         _gameOverCanvas.SetActive(true);
 
         Time.timeScale = 0f;
+
         
+
     }
     public void RestartGame()
     {
